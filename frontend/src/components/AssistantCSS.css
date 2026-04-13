@@ -1,0 +1,124 @@
+.assistant-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.back-btn {
+  align-self: flex-start;
+  margin-bottom: 2rem;
+}
+
+/* CENTER */
+.assistant-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* WATER ANIMATION (YOUR ORIGINAL CODE) */
+.water-round-container {
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid silver;
+
+  animation: water-waves linear infinite;
+  animation-duration: 8s;
+
+  /* 🔴 paused by default */
+  animation-play-state: paused;
+}
+
+/* 🎤 active listening */
+.water-round-container.active {
+  animation-play-state: running;
+}
+.water-round-container.active {
+  animation-play-state: running;
+  box-shadow: 0 0 30px #33cfff;
+}
+
+.water-wave1 {
+  position: absolute;
+  top: 30%;
+  left: -25%;
+  background: #d6d610;
+  opacity: 0.7;
+  width: 200%;
+  height: 200%;
+  border-radius: 40%;
+  animation: inherit;
+  animation-duration: 5s;
+}
+
+.water-wave2 {
+  position: absolute;
+  top: 45%;
+  left: -35%;
+  background: #fdff1a;
+  opacity: 0.5;
+  width: 200%;
+  height: 200%;
+  border-radius: 35%;
+  animation: inherit;
+  animation-duration: 7s;
+}
+
+.water-wave3 {
+  position: absolute;
+  top: 50%;
+  left: -35%;
+  background: #feff4d;
+  opacity: 0.3;
+  width: 200%;
+  height: 200%;
+  border-radius: 33%;
+  animation: inherit;
+  animation-duration: 11s;
+}
+
+@keyframes water-waves {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mic-btn {
+  margin-top: 20px;
+}
+
+.clear-btn {
+  background: #e74c3c;
+  margin-top: 10px;
+}
+
+.clear-btn:hover {
+  background: #c0392b;
+}
+
+
+.status-text {
+  margin-top: 15px;
+  white-space: pre-line;
+  color: #fff;
+}
+
+.loading {
+  color: yellow;
+  margin-top: 10px;
+}
+
+.error {
+  color: #ff4d4d;
+  margin-top: 10px;
+  font-weight: bold;
+}

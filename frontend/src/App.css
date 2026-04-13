@@ -1,0 +1,60 @@
+#root {
+  min-height: 100vh;
+}
+
+/* HOME PAGE BACKGROUND */
+.home-bg {
+  min-height: 100vh;
+
+  background-image:
+    url("/wave-up.svg"),
+    url("/wave-down.svg");
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom left;
+  background-size: 100% 40vh, 100% 40vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HOME CONTENT */
+.home-content {
+  text-align: center;
+  padding: 6rem 2rem;
+  z-index: 1;
+}
+
+/* TITLE EFFECT */
+.hover-text {
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hover-text span:hover {
+  color: #fdff00;
+}
+
+/* BUTTONS */
+.button-div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #1a1a1a;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #fdff00;
+  color: black;
+}
